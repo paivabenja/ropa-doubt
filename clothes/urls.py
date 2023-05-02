@@ -1,8 +1,8 @@
-from django.urls import path, include
 from rest_framework import routers
-from user.views import UserView
+from clothes.views import ClothesView
+from django.urls import path, include
 
 router = routers.DefaultRouter()
-router.register("api", UserView)
+router.register("api", ClothesView)
 
 urlpatterns = [path("", include(router.urls))]
